@@ -1,0 +1,112 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #b784db;
+}
+
+.envelope{
+    position: relative;
+    cursor: pointer;
+}
+
+.back{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background: #6247aa;
+}
+
+
+.front{
+    position: absolute;
+    border-right: 130px solid #815ac0;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 120px;
+    z-index: 3;
+}
+
+.front:before{
+    content: "";
+    position: absolute;
+    border-left: 130px solid #815ac0;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    top: -100px;
+    left: -120px;
+}
+
+.front:after{
+    content: "";
+    position: absolute;
+    border-bottom: 105px solid #7251b5;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    height: 0;
+width: 0;
+top: -5px;
+left: -120px;
+}
+
+.top{
+    position: absolute;
+    border-top: 105px solid #9163cb;
+    border-left:125px solid transparent ;
+    border-right:125px solid transparent ;
+height: 0;
+width: 0;
+top: 0;
+transform-origin: top;
+transition: 0.4s;
+}
+
+
+.envelope:hover .top {
+      transform: rotateX('160deg');
+}
+
+.letter{
+    position: absolute;
+    background: white;
+    width: 230px;
+    height: 180px;
+    top: 10px;
+    left: 10px;
+transition: 0.2s;
+}
+
+.envelope:hover .letter{
+    transform: translateY(-100px);
+    z-index: 2;
+}
+
+.text1{
+    position: absolute;
+    color: white;
+    font-family: sans-serif;
+}
+
+.image1{
+    height: 180px;
+    width: 230px;
+}
+
+
+.party{
+    display: flex;
+margin-left: 100px;
+border: 3px solid black;
+
+}
+
+.party:hover{
+    background-color: #815ac0;
+}
+
